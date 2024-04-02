@@ -1,0 +1,15 @@
+<!--pages/component-page/form/checkbox/checkbox.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">checkbox</view>
+    <view class="header-desc">多选项目</view>
+  </view>
+  <view class="content">
+    <checkbox-group class="cells" bindchange="changeSize">
+      <label class="cell" wx:for="{{openTypeList}}" wx:for-item="item" wx:key="{{item}}">
+        <checkbox class="cell-header" value="{{item}}" checked="{{item === openType}}" />
+        <view class="cell-body">{{item}}</view>
+      </label>
+    </checkbox-group>
+  </view>
+</view>

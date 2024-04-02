@@ -1,0 +1,8 @@
+<!--pages/component-page/form/label/label.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">label</view>
+    <view class="header-desc">用来改进表单组件的可用性</view>
+  </view>
+  <view class="content"></view>
+</view>

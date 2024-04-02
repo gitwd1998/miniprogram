@@ -1,0 +1,8 @@
+<!--pages/expand-page/feedback/dialog/dialog.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">dialog</view>
+    <view class="header-desc">对话框</view>
+  </view>
+  <view class="content"></view>
+</view>

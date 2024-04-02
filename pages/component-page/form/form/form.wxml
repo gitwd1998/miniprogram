@@ -1,0 +1,67 @@
+<!--pages/component-page/form/form/form.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">form</view>
+    <view class="header-desc">表单</view>
+  </view>
+  <view class="content">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view>
+        <view class="cells-title">基本信息</view>
+        <view class="cells">
+          <view class="cell">
+            <view class="cell-label">姓名</view>
+            <input class="cell-body" type="text" name="name" value="{{form.name}}" placeholder="请输入姓名" />
+          </view>
+          <view class="cell">
+            <view class="cell-label">性别</view>
+            <radio-group class="cell-body" name="sex">
+              <label><radio value="1" />男</label>
+              <label><radio value="2" />女</label>
+            </radio-group>
+          </view>
+          <view class="cell">
+            <view class="cell-label">年龄</view>
+            <input class="cell-body" type="number" name="age" value="{{form.age}}" placeholder="请输入真是年龄" />
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="cells-title">其他信息</view>
+        <view class="cells">
+          <view class="cell">
+            <view class="cell-label">技能</view>
+            <checkbox-group class="cell-body" name="skill">
+              <label><checkbox value="1" checked />js</label>
+              <label><checkbox value="2" />html</label>
+              <label><checkbox value="3" />css</label>
+            </checkbox-group>
+          </view>
+          <view class="cell">
+            <view class="cell-label">同意</view>
+            <view class="cell-body"></view>
+            <switch class="cell-footer" name="agree" checked="{{form.agree}}" />
+          </view>
+          <view class="cell">
+            <view class="cell-label">熟练度</view>
+            <view class="cell-body">
+              <slider show-value name="skilled" value="{{form.skilled}}" />
+            </view>
+          </view>
+        </view>
+        <view class="cells">
+          <view class="cell column">
+            <view class="cell-header">备注</view>
+            <view class="cell-body">
+              <textarea name="remark" value="{{form.remark}}" placeholder="请输入备注" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <button class="cells-btn" type="primary" form-type="submit">提交</button>
+        <button class="cells-btn" type="default" form-type="reset">重置</button>
+      </view>
+    </form>
+  </view>
+</view>

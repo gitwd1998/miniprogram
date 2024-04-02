@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "half-screen-dialog",
+  "onReachBottomDistance": 50
+}

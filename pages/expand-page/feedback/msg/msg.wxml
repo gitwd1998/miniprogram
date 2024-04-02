@@ -1,0 +1,8 @@
+<!--pages/expand-page/feedback/msg/msg.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">msg</view>
+    <view class="header-desc">提示页</view>
+  </view>
+  <view class="content"></view>
+</view>

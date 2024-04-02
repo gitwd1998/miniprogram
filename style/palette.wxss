@@ -1,0 +1,103 @@
+@media (prefers-color-scheme: light) {
+  page {
+    --BG: #ffffff;
+    --BG-0: #ededed;
+    --BG-1: #f7f7f7;
+    --BG-2: #ffffff;
+    --BG-3: #f7f7f7;
+    --BG-4: #4c4c4c;
+    --BG-5: #ffffff;
+    --FG: #000000;
+    --FG-0: rgba(0, 0, 0, .9);
+    --FG-HALF: rgba(0, 0, 0, .9);
+    --FG-1: rgba(0, 0, 0, .5);
+    --FG-2: rgba(0, 0, 0, .3);
+    --FG-3: rgba(0, 0, 0, .1);
+    --FG-4: rgba(0, 0, 0, .15);
+    --RED: #fa5151;
+    --ORANGE: #fa9d3b;
+    --YELLOW: #ffc300;
+    --GREEN: #91d300;
+    --LIGHTGREEN: #95ec69;
+    --BRAND: #07c160;
+    --BLUE: #10aeff;
+    --INDIGO: #1485ee;
+    --PURPLE: #6467f0;
+    --WHITE: #ffffff;
+    --LINK: #576b95;
+    --TEXTGREEN: #06ae56;
+    --TAG-TEXT-ORANGE: #fa9d3b;
+    --TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, .1);
+    --TAG-TEXT-GREEN: #06ae56;
+    --TAG-BACKGROUND-GREEN: rgba(6, 174, 86, .1);
+    --TAG-TEXT-BLUE: #10aeff;
+    --TAG-BACKGROUND-BLUE: rgba(16, 174, 255, .1);
+    --TAG-TEXT-BLACK: rgba(0, 0, 0, .5);
+    --TAG-BACKGROUND-BLACK: rgba(0, 0, 0, .05)
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  page {
+    --BG: #000000;
+    --BG-0: #111111;
+    --BG-1: #1e1e1e;
+    --BG-2: #191919;
+    --BG-3: #202020;
+    --BG-4: #404040;
+    --BG-5: #2c2c2c;
+    --FG: #ffffff;
+    --FG-0: hsla(0, 0%, 100%, .8);
+    --FG-HALF: hsla(0, 0%, 100%, .6);
+    --FG-1: hsla(0, 0%, 100%, .5);
+    --FG-2: hsla(0, 0%, 100%, .3);
+    --FG-3: hsla(0, 0%, 100%, .1);
+    --FG-4: hsla(0, 0%, 100%, .15);
+    --RED: #fa5151;
+    --ORANGE: #c87d2f;
+    --YELLOW: #cc9c00;
+    --GREEN: #74a800;
+    --LIGHTGREEN: #3eb575;
+    --BRAND: #07c160;
+    --BLUE: #10aeff;
+    --INDIGO: #1196ff;
+    --PURPLE: #8183ff;
+    --WHITE: hsla(0, 0%, 100%, .8);
+    --LINK: #7d90a9;
+    --TEXTGREEN: #259c5c;
+    --TAG-TEXT-ORANGE: rgba(250, 157, 59, .6);
+    --TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, .1);
+    --TAG-TEXT-GREEN: rgba(6, 174, 86, .6);
+    --TAG-BACKGROUND-GREEN: rgba(6, 174, 86, .1);
+    --TAG-TEXT-BLUE: rgba(16, 174, 255, .6);
+    --TAG-BACKGROUND-BLUE: rgba(16, 174, 255, .1);
+    --TAG-TEXT-BLACK: hsla(0, 0%, 100%, .5);
+    --TAG-BACKGROUND-BLACK: hsla(0, 0%, 100%, .05)
+  }
+}
+
+.error {
+  background: var(--RED) !important;
+}
+
+.primary {
+  background: var(--BRAND) !important;
+}
+
+.warning {
+  background: var(--ORANGE) !important;
+}
+
+.info {
+  background: var(--BLUE) !important;
+}
+
+.mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+}

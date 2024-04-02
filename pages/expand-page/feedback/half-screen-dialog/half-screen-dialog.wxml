@@ -1,0 +1,8 @@
+<!--pages/expand-page/feedback/half-screen-dialog/half-screen-dialog.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">half-screen-dialog</view>
+    <view class="header-desc">半屏组件</view>
+  </view>
+  <view class="content"></view>
+</view>

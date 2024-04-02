@@ -1,0 +1,15 @@
+<!--pages/component-page/form/radio/radio.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">radio</view>
+    <view class="header-desc">单选项目</view>
+  </view>
+  <view class="content">
+    <radio-group class="cells" bindchange="changeSize">
+      <label class="cell" wx:for="{{openTypeList}}" wx:for-item="item" wx:key="{{item}}">
+        <radio class="cell-header" value="{{item}}" checked="{{item === openType}}" />
+        <view class="cell-body">{{item}}</view>
+      </label>
+    </radio-group>
+  </view>
+</view>

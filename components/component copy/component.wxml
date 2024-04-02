@@ -1,0 +1,39 @@
+<!--pages/component/component.wxml-->
+<!-- <mp-searchbar /> -->
+<view class="container">
+  <view>
+    <!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+      <view>test content</view>
+    </mp-dialog> -->
+    <mp-badge content="100" />
+    <!-- <mp-gallery imgUrls="{{imgUrls}}" /> -->
+    <mp-icon icon="add-friends" />
+    <mp-icon icon="add-friends" type="field" />
+    <mp-icon icon="add-friends" color="#f00" />
+    <mp-loading animated="true" tips="loading..." type="circle" />
+    <mp-form-page title="表单结构" subtitle="展示表单页面的信息结构样式, 分别由头部区域/控件区域/提示区域/操作区域和底部信息区域组成。">
+      <mp-form>
+        <mp-cells title="头部说明文字" footer="尾部说明文字">
+          <mp-cell value="标题文字" footer="说明文字"></mp-cell>
+          <mp-cell>
+            <view>标题文字（使用slot）</view>
+            <view slot="footer">说明文字</view>
+          </mp-cell>
+        </mp-cells>
+        <mp-cells title="单选列表项">
+          <mp-checkbox-group prop="radio" multi="{{false}}">
+            <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" />
+          </mp-checkbox-group>
+        </mp-cells>
+        <mp-cells title="复选列表项">
+          <mp-checkbox-group prop="checkbox" multi="{{true}}">
+            <mp-checkbox wx:for="{{checkboxItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}" />
+          </mp-checkbox-group>
+        </mp-cells>
+        <mp-cells title="左滑删除组件">
+          <mp-slideview buttons="{{buttons}}">往左滑动试试</mp-slideview>
+        </mp-cells>
+      </mp-form>
+    </mp-form-page>
+  </view>
+</view>

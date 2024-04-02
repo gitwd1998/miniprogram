@@ -1,0 +1,6 @@
+<!--pages/logs/logs.wxml-->
+<view>
+  <view class="content content__spacing">
+    <view wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">{{index + 1}}. {{log.date}}</view>
+  </view>
+</view>

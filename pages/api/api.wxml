@@ -1,0 +1,27 @@
+<!--pages/api/api.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">接口小程序接口能力展示</view>
+    <view class="header-desc">
+      <text>以下将演示小程序接口能力，具体属性详见 小程序开发文档</text>
+    </view>
+  </view>
+  <view class="content content__spacing">
+    <view wx:for="{{list}}" wx:key="title" wx:for-item="item" wx:for-index="index" data-index="{{index}}" bindtap="handleSelected" class="content-item {{index === selected ? 'content-item_open' : 'content-item_flod'}}">
+      <view class="content-item-title">
+        <view class="cell">
+          <view class="cell-header">{{item.title}}</view>
+          <view class="cell-body"></view>
+          <icon class="cell-footer" type="info_circle" />
+        </view>
+      </view>
+      <view class="content-item-wrap" style="height: {{index === selected ? item.items.length * 56 + 'px' : 0}}">
+        <view wx:for="{{item.items}}" wx:key="name" wx:for-item="nav" data-url="{{nav.url}}" catchtap="toPage" class="cell cell__access" hover-class="cell__active">
+          <view class="cell-header">{{nav.name}}</view>
+          <view class="cell-body"></view>
+          <view class="cell-footer"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/expand-page/form/uploader/uploader.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">uploader</view>
+    <view class="header-desc">文件上传</view>
+  </view>
+  <view class="content"></view>
+</view>

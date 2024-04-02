@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <block wx:if="{{canIUseButttonChooseAvatar && canIUseInputNickname && (!userInfo.nickName || !userInfo.avatarUrl)}}">
+    <view class="header">
+      <button open-type="chooseAvatar" bind:chooseavatar="bindChooseavatar">
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      </button>
+    </view>
+    <view class="cells">
+      <view class="cell">
+        <view class="cell-label">昵称</view>
+        <input class="cell-body" type="nickname" placeholder="请输入昵称" bind:change="bindChange" />
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{userInfo.nickName && userInfo.avatarUrl}}">
+    <view class="header">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" bind:tap="toLogs"></image>
+    </view>
+    <view class="cells">
+      <view class="cell">
+        <view class="cell-label">昵称</view>
+        <view class="cell-value">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+  </block>
+  <view class="header" wx:else>
+    <button type="primary" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> getUserProfile </button>
+    <button type="primary" wx:elif="{{canIUseGetUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> getUserInfo </button>
+    <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+  </view>
+</view>

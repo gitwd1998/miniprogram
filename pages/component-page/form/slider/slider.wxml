@@ -1,0 +1,84 @@
+<!--pages/component-page/form/slider/slider.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">slider</view>
+    <view class="header-desc">滑动选择器</view>
+    <slider class="cell-body" min="0" max="100" step="{{step}}" disabled="{{disabled}}" value="{{value}}" show-value="{{showValue}}" block-color="{{blockColor}}" block-size="{{blockSize}}" bindchanging="handleChange" bindchange="handleChange" />
+  </view>
+  <view class="content">
+    <view>
+      <view class="cells-title">步长</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">step</view>
+          <slider class="cell-body" min="0" max="{{value}}" value="{{step}}" show-value bindchanging="changeStep" bindchange="changeStep" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">是否禁用</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">disabled</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{disabled}}" bindchange="changeDisabled" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">当前取值</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">value</view>
+          <slider class="cell-body" min="0" max="100" value="{{value}}" show-value bindchanging="changeValue" bindchange="changeValue" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">已选择的颜色</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">activeColor</view>
+          <input class="cell-body" value="{{activeColor}}" bindconfirm="changeActiveColor" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">背景条的颜色</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">backgroundColor</view>
+          <input class="cell-body" value="{{backgroundColor}}" bindconfirm="changeBackgroundColor" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">滑块的颜色</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">block-color</view>
+          <input class="cell-body" type="text" value="{{blockColor}}" bindconfirm="changeBlockColor" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">滑块的大小</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">block-size</view>
+          <slider class="cell-body" min="12" max="28" value="{{blockSize}}" show-value bindchanging="changeBlockSize" bindchange="changeBlockSize" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">是否显示当前 value</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">show-value</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{showValue}}" bindchange="changeShowValue" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

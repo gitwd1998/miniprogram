@@ -1,0 +1,69 @@
+<!--pages/component-page/form/button/button.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">button</view>
+    <view class="header-desc">按钮</view>
+    <button size="{{size}}" type="{{typeList[type]}}" plain="{{plain}}" disabled="{{disabled}}" loading="{{loading}}">{{text}}</button>
+  </view>
+  <view class="content">
+    <view>
+      <view class="cells-title">按钮的文本</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">text</view>
+          <input class="cell-body" type="text" value="{{text}}" bindconfirm="changeText" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">按钮的大小</view>
+      <radio-group class="cells" bindchange="changeSize">
+        <label class="cell" wx:for="{{sizeList}}" wx:for-item="item" wx:key="{{item}}">
+          <radio class="cell-header" value="{{item}}" checked="{{item === size}}" />
+          <view class="cell-body">{{item}}</view>
+        </label>
+      </radio-group>
+    </view>
+    <view>
+      <view class="cells-title">按钮的样式类型</view>
+      <view class="cells">
+        <view class="cell cell__access">
+          <view class="cell-label">type</view>
+          <picker class="cell-body" mode="selector" range="{{typeList}}" value="{{type}}" bindchange="changeType">{{typeList[type]}}</picker>
+          <view class="cell-footer"></view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">按钮是否镂空 背景色透明</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">plain</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{plain}}" bindchange="changePlain" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">是否禁用</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">disabled</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{disabled}}" bindchange="changeDisabled" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">是否带 loading 图标</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">loading</view>
+          <view class="cell-body"></view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{loading}}" bindchange="changeLoading" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

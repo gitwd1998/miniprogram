@@ -1,0 +1,8 @@
+<!--pages/component-page/base/rich-text/rich-text.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">rich-text</view>
+    <view class="header-desc">富文本</view>
+  </view>
+  <view class="content"></view>
+</view>

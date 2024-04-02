@@ -1,0 +1,48 @@
+<!--pages/component-page/form/switch/switch.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">switch</view>
+    <view class="header-desc">开关选择器</view>
+    <switch checked="{{checked}}" type="{{type}}" disabled="{{disabled}}" color="{{color}}" />
+  </view>
+  <view class="content">
+    <view>
+      <view class="cells-title">是否选中</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">checked</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{checked}}" bindchange="changeChecked" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">是否禁用</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">disabled</view>
+          <view class="cell-body"></view>
+          <switch class="cell-footer" checked="{{disabled}}" bindchange="changeDisabled" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">开关样式</view>
+      <radio-group class="cells" bindchange="changeType">
+        <label class="cell" wx:for="{{typeList}}" wx:for-item="item" wx:key="{{item}}">
+          <radio class="cell-header" value="{{item}}" checked="{{item === type}}" />
+          <view class="cell-body">{{item}}</view>
+        </label>
+      </radio-group>
+    </view>
+    <view>
+      <view class="cells-title">switch 的颜色 同 css 的 color</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">color</view>
+          <input class="cell-body" type="text" value="{{color}}" bindconfirm="changeColor" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

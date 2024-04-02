@@ -1,0 +1,23 @@
+<!--pages/component/component.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">小程序官方组件展示</view>
+    <view class="header-desc">
+      <text>以下将将展示小程序官方组件能力，组件样式仅供参考，开发者可根据自身需求自定义组件样式，具体属性参数详见 小程序开发文档</text>
+    </view>
+  </view>
+  <view class="content content__spacing">
+    <view wx:for="{{list}}" wx:key="title" wx:for-item="item" wx:for-index="index" data-index="{{index}}" bindtap="handleSelected" class="content-item {{index === selected ? 'content-item_open' : 'content-item_flod'}}">
+      <view class="content-item-title">
+        <view class="cell">
+          <view class="cell-header">{{item.title}}</view>
+          <view class="cell-body"></view>
+          <icon class="cell-footer" type="info_circle" />
+        </view>
+      </view>
+      <mp-cells data-weui-theme="dark" wx:if="{{index === selected}}">
+        <mp-cell wx:for="{{item.items}}" wx:key="name" wx:for-item="nav" link value="{{nav.name}}" data-url="{{nav.url}}" catchtap="toPage" />
+      </mp-cells>
+    </view>
+  </view>
+</view>

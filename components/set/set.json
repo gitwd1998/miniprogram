@@ -1,0 +1,14 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#ededed",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "设置",
+  "navigationStyle": "default",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "dark",
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff",
+  "onReachBottomDistance": 50,
+  "pageOrientation": "auto",
+  "disableScroll": false
+}

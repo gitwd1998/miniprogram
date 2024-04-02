@@ -1,0 +1,179 @@
+{
+  "pages": [
+    "pages/mine/mine",
+    "pages/component/component",
+    "pages/expand/expand",
+    "pages/api/api",
+    "pages/cloud/cloud",
+
+    "pages/component-page/view/view/view",
+    "pages/component-page/view/scroll-view/scroll-view",
+    "pages/component-page/view/swiper/swiper",
+    "pages/component-page/view/moveable-view/moveable-view",
+    "pages/component-page/view/cover-view/cover-view",
+
+    "pages/component-page/base/text/text",
+    "pages/component-page/base/icon/icon",
+    "pages/component-page/base/progress/progress",
+    "pages/component-page/base/rich-text/rich-text",
+
+    "pages/component-page/form/button/button",
+    "pages/component-page/form/checkbox/checkbox",
+    "pages/component-page/form/form/form",
+    "pages/component-page/form/input/input",
+    "pages/component-page/form/label/label",
+    "pages/component-page/form/picker/picker",
+    "pages/component-page/form/picker-view/picker-view",
+    "pages/component-page/form/radio/radio",
+    "pages/component-page/form/slider/slider",
+    "pages/component-page/form/switch/switch",
+    "pages/component-page/form/textarea/textarea",
+    "pages/component-page/form/editor/editor",
+
+    "pages/component-page/nav/navigator/navigator",
+
+    "pages/component-page/media/image/image",
+    "pages/component-page/media/video/video",
+    "pages/component-page/media/camera/camera",
+    "pages/component-page/media/live-pusher/live-pusher",
+    "pages/component-page/media/live-player/live-player",
+
+    "pages/component-page/map/map/map",
+    "pages/component-page/map/location-service/location-service",
+
+    "pages/component-page/canvas/canvas-2d/canvas-2d",
+    "pages/component-page/canvas/webgl/webgl",
+
+    "pages/component-page/open/ad/ad",
+    "pages/component-page/open/open-data/open-data",
+    "pages/component-page/open/web-view/web-view",
+
+    "pages/component-page/aria/aria-component/aria-component",
+
+    "pages/expand-page/form/cell/cell",
+    "pages/expand-page/form/sliderview/sliderview",
+    "pages/expand-page/form/form/form",
+    "pages/expand-page/form/uploader/uploader",
+
+    "pages/expand-page/base/article/article",
+    "pages/expand-page/base/icons/icons",
+    "pages/expand-page/base/badge/badge",
+    "pages/expand-page/base/flex/flex",
+    "pages/expand-page/base/footer/footer",
+    "pages/expand-page/base/gallery/gallery",
+    "pages/expand-page/base/grid/grid",
+    "pages/expand-page/base/loadmore/loadmore",
+    "pages/expand-page/base/loading/loading",
+    "pages/expand-page/base/panel/panel",
+    "pages/expand-page/base/panelview/panelview",
+
+    "pages/expand-page/feedback/dialog/dialog",
+    "pages/expand-page/feedback/msg/msg",
+    "pages/expand-page/feedback/half-screen-dialog/half-screen-dialog",
+    "pages/expand-page/feedback/actionsheet/actionsheet",
+    "pages/expand-page/feedback/toptips/toptips",
+
+    "pages/expand-page/nav/navigation/navigation",
+    "pages/expand-page/nav/tabber/tabber",
+
+    "pages/expand-page/search/searchbar/searchbar",
+
+    "pages/expand-page/expand/emoji/emoji",
+    "pages/expand-page/expand/video-swiper/video-swiper",
+    "pages/expand-page/expand/index-list/index-list",
+    "pages/expand-page/expand/recycle-view/recycle-view",
+    "pages/expand-page/expand/sticky/sticky",
+    "pages/expand-page/expand/tabs/tabs",
+    "pages/expand-page/expand/vtabs/vtabs",
+    "pages/expand-page/expand/barrage/barrage",
+    "pages/expand-page/expand/select-text/select-text",
+    "pages/expand-page/expand/wxml-to-canvas/wxml-to-canvas",
+
+    "pages/expand-page/adaptation/stretch/stretch",
+    "pages/expand-page/adaptation/wrap-arrangement/wrap-arrangement",
+    "pages/expand-page/adaptation/sidebar/sidebar",
+    "pages/expand-page/adaptation/paging/paging",
+    "pages/expand-page/adaptation/free/free",
+    "pages/expand-page/adaptation/layered/layered",
+    "pages/expand-page/adaptation/horizontal/horizontal",
+
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "@navigationBarBackgroundColor",
+    "navigationBarTextStyle": "@navigationBarTextStyle",
+    "navigationBarTitleText": "胸胸的小吕",
+    "navigationStyle": "default",
+    "backgroundColor": "@backgroundColor",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 10,
+    "pageOrientation": "auto",
+    "backgroundTextStyle": "@backgroundTextStyle"
+  },
+  "tabBar": {
+    "color": "@color",
+    "selectedColor": "@selectedColor",
+    "borderStyle": "@borderStyle",
+    "backgroundColor": "@tabBackgroundColor",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/component/component",
+        "text": "组件",
+        "iconPath": "@componentIconPath",
+        "selectedIconPath": "@componentSelectedIconPath"
+      },
+      {
+        "pagePath": "pages/expand/expand",
+        "text": "扩展",
+        "iconPath": "@expandIconPath",
+        "selectedIconPath": "@expandSelectedIconPath"
+      },
+      {
+        "pagePath": "pages/api/api",
+        "text": "接口",
+        "iconPath": "@apiIconPath",
+        "selectedIconPath": "@apiSelectedIconPath"
+      },
+      {
+        "pagePath": "pages/cloud/cloud",
+        "text": "云开发",
+        "iconPath": "@cloudIconPath",
+        "selectedIconPath": "@cloudSelectedIconPath"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "@mineIconPath",
+        "selectedIconPath": "@mineSelectedIconPath"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-msg": "weui-miniprogram/msg/msg",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我特么想获取你的位置"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "darkmode": true,
+  "themeLocation":"theme.json",
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "debug": false
+}

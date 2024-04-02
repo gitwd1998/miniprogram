@@ -1,0 +1,25 @@
+<!--pages/component-page/form/picker/picker.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">picker</view>
+    <view class="header-desc">从底部弹出的滚动选择器</view>
+  </view>
+  <view class="content">
+    <view>
+      <view class="cells-title">普通选择器</view>
+      <view class="cells">
+        <view class="cell">
+          <picker class="cell-picker" mode="selector" range="{{selectorRang}}" value="{{selector}}" bindchange="changeSelector">{{selectorRang[selector]}}</picker>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">多列选择器</view>
+      <view class="cells">
+        <view class="cell">
+          <picker class="cell-picker" mode="multiSelector" range="{{multiSelectorRang}}" value="{{multiSelector}}" bindchange="changeMultiSelector" bindcolumnchange="changeColumnMultiSelector">{{multiSelectorText}}</picker>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

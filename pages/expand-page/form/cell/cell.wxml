@@ -1,0 +1,8 @@
+<!--pages/expand-page/form/cell/cell.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">cell</view>
+    <view class="header-desc">单元格</view>
+  </view>
+  <view class="content"></view>
+</view>

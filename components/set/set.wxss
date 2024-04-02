@@ -1,0 +1,5 @@
+/* pages/set/set.wxss */
+cover-image{
+  width: 300rpx;
+  height: 300rpx;
+}

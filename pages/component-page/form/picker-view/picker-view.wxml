@@ -1,0 +1,8 @@
+<!--pages/component-page/form/picker-view/picker-view.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">picker-view</view>
+    <view class="header-desc">嵌入页面的滚动选择器</view>
+  </view>
+  <view class="content"></view>
+</view>

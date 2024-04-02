@@ -1,0 +1,27 @@
+<!--pages/expand/expand.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">小程序扩展能力展示</view>
+    <view class="header-desc">
+      <text>以下是对小程序内置组件能力的补充，包括WeUI组件库和一些常见的功能组件，具体属性参数详见 小程序开发文档</text>
+    </view>
+  </view>
+  <view class="content content__spacing">
+    <view wx:for="{{list}}" wx:key="title" wx:for-item="item" wx:for-index="index" data-index="{{index}}" bindtap="handleSelected" class="content-item {{index === selected ? 'content-item_open' : 'content-item_flod'}}">
+      <view class="content-item-title">
+        <view class="cell">
+          <view class="cell-header">{{item.title}}</view>
+          <view class="cell-body"></view>
+          <icon class="cell-footer" type="info_circle" />
+        </view>
+      </view>
+      <view class="content-item-wrap" style="height: {{index === selected ? item.items.length * 56 + 'px' : 0}}">
+        <view wx:for="{{item.items}}" wx:key="name" wx:for-item="nav" data-url="{{nav.url}}" catchtap="toPage" class="cell cell__access" hover-class="cell__active">
+          <view class="cell-header">{{nav.name}}</view>
+          <view class="cell-body"></view>
+          <view class="cell-footer"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

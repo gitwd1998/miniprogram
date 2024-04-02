@@ -1,0 +1,44 @@
+<!--pages/expand-page/feedback/toptips/toptips.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">toptips</view>
+    <view class="header-desc">顶部提示条</view>
+  </view>
+  <view class="content">
+    <view class="cells">
+      <view class="cell cell__access" hover-class="cell__active" bindtap="openTips">
+        <view class="cell-header">显示默认提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+      <view class="cell cell__access" hover-class="cell__active" data-scene="primary" bindtap="openTips">
+        <view class="cell-header">显示成功提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+      <view class="cell cell__access" hover-class="cell__active" data-scene="error" bindtap="openTips">
+        <view class="cell-header">显示失败提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+      <view class="cell cell__access" hover-class="cell__active" data-scene="warning" bindtap="openTips">
+        <view class="cell-header">显示警告提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+      <view class="cell cell__access" hover-class="cell__active" data-scene="info" bindtap="openTips">
+        <view class="cell-header">显示信息提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+    </view>
+    <view class="cells">
+      <view class="cell cell__access" hover-class="cell__active" bindtap="closeTips">
+        <view class="cell-header">关闭提示条</view>
+        <view class="cell-body"></view>
+        <view class="cell-footer"></view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{showTips}}" class="toptips {{scene}} fadeIn {{hide ? 'fadeOut' : ''}}">提示信息</view>
+</view>

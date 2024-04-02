@@ -1,0 +1,38 @@
+page {
+  height: 100%;
+  background: var(--BG-0);
+}
+page > view {
+  min-height: 120%;
+  color: var(--FG-0);
+}
+.header {
+  padding: 60rpx
+}
+.header-title {}
+.header-desc {
+  margin-top: 5px;
+  color: var(--FG-1);
+}
+.content {
+  padding: 0 0 60rpx;
+}
+.content__spacing {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.content-item {
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background: var(--BG-2);
+  overflow: hidden;
+}
+.content-item-wrap, .content-item-title {
+  transition: all .3s;
+}
+.content-item_open .content-item-title {
+  opacity: .3;
+}
+.content-item_flod .content-item-title {
+  opacity: 1;
+}

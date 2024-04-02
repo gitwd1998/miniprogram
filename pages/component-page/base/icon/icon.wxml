@@ -1,0 +1,38 @@
+<!--pages/component-page/base/icon/icon.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">icon</view>
+    <view class="header-desc">图标组件</view>
+    <icon type="{{typeList[type]}}" size="{{size}}" color="{{color}}" />
+  </view>
+  <view class="content">
+    <view>
+      <view class="cells-title">icon的大小 单位默认为px</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">size</view>
+          <slider class="cell-body" min="16" max="100" value="{{size}}" show-value bindchanging="changeSize" bindchange="changeSize" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">icon的颜色 同css的color</view>
+      <view class="cells">
+        <view class="cell">
+          <view class="cell-label">color</view>
+          <input class="cell-body" value="{{color}}" bindconfirm="changeColor" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="cells-title">icon的类型</view>
+      <view class="cells">
+        <view class="cell cell__access">
+          <view class="cell-label">type</view>
+          <picker class="cell-body" mode="selector" range="{{typeList}}" value="{{type}}" bindchange="changeType">{{typeList[type]}}</picker>
+          <view class="cell-footer"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

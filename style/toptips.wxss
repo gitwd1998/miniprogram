@@ -1,0 +1,14 @@
+.toptips {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.8235294117647058rem;
+  text-align: center;
+  z-index: 100;
+  word-wrap: break-word;
+  word-break: break-all;
+  background: var(--BG-1);
+}

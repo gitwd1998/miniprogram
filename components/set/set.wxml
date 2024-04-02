@@ -1,0 +1,10 @@
+<!--pages/set/set.wxml-->
+<camera flash="off" binderror="takePhotoError" style="width: 100%; height: 300px;" device-position="{{device_position}}"></camera>
+<radio-group bindchange="handleChange">
+  <radio value="front">前置</radio>
+  <radio value="back" checked="true">后置</radio>
+</radio-group>
+<button bindtap="takePhoto">拍 照</button>
+
+<text>预 览</text>
+<cover-image wx:if="{{photo}}" src="{{photo}}" bindload="loadSuccess" binderror="loadError"></cover-image>

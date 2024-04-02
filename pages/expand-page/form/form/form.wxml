@@ -1,0 +1,8 @@
+<!--pages/expand-page/form/form/form.wxml-->
+<view>
+  <view class="header">
+    <view class="header-title">form</view>
+    <view class="header-desc">表单</view>
+  </view>
+  <view class="content"></view>
+</view>

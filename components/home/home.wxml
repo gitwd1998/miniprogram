@@ -1,0 +1,10 @@
+<!--pages/home/home.wxml-->
+<!-- <cover-view/> 内只能嵌套 <cover-view/> <cover-image/> <button/> <navigator/> <ad/>，text 标签的子节点树在真机上都会被忽略。 -->
+<view>
+  <button open-type="share">分享</button>
+  <button bindtap="handleGet">获取当前页</button>
+  <button bindtap="handleLocation">位置信息</button>
+  <button bindtap="handleScan">扫一扫</button>
+  <button bindtap="handleAccount">获取账号信息</button>
+  <open-data></open-data>
+</view>

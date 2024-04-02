@@ -1,0 +1,10 @@
+<!--pages/expand-page/form/sliderview/sliderview.wxml-->
+<view>
+  <view>
+  <view class="header">
+    <view class="header-title">sliderview</view>
+    <view class="header-desc">左滑操作</view>
+  </view>
+  <view class="content"></view>
+</view>
+</view>
