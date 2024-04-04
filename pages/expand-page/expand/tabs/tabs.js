@@ -1,66 +1,25 @@
 // pages/expand-page/expand/tabs/tabs.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    activeTab: 0,
+    tabs: [
+      { title: '技术开发', color: 'tomato' },
+      { title: '产品解析', color: 'teal' },
+      { title: '运营规范', color: 'red' },
+      { title: '营销经验', color: 'yellow' },
+      { title: '高校大赛', color: 'blue' },
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onTabClick(e) {
+    const index = e.detail.index
+    this.setData({ 
+      activeTab: index 
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onChange(e) {
+    const index = e.detail.index
+    this.setData({ 
+      activeTab: index 
+    })
   }
 })

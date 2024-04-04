@@ -1,4 +1,13 @@
 <!--pages/expand-page/expand/tabs/tabs.wxml-->
-<view>
-  <text>pages/expand-page/expand/tabs/tabs.wxml</text>
+<view class="page">
+  <mp-tabs 
+    tabs="{{tabs}}" 
+    activeTab="{{activeTab}}" 
+    bindtabclick="onTabClick"
+    bindchange="onChange"
+  >
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view slot="tab-content-{{index}}" style="background-color: {{item.color}}; height: 100%;"></view>
+    </block>
+  </mp-tabs>
 </view>

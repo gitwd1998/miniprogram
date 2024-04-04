@@ -159,7 +159,8 @@
     "mp-cells": "weui-miniprogram/cells/cells",
     "mp-cell": "weui-miniprogram/cell/cell",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "mp-slideview": "weui-miniprogram/slideview/slideview"
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "mp-tabs": "@miniprogram-component-plus/tabs"
   },
   "permission": {
     "scope.userLocation": {
