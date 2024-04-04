@@ -5,99 +5,56 @@
     <view class="header-desc">进度条</view>
     <progress percent="{{percent}}" font-size="{{fontSize}}" show-info="{{showInfo}}" border-radius="{{borderRadius}}" stroke-width="{{strokeWidth}}" activeColor="{{activeColor}}" backgroundColor="{{backgroundColor}}" active="{{active}}" active-mode="{{activeModeList[activeMode]}}" duration="{{duration}}" />
   </view>
-  <view class="content">
-    <view>
-      <view class="cells-title">百分比 0~100</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">percent</view>
-          <slider class="cell-body" min="0" max="100" value="{{percent}}" show-value bindchange="changePercent" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">在进度条右侧显示百分比</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">show-info</view>
-          <view class="cell-body"></view>
-          <switch class="cell-footer" checked="{{showInfo}}" bindchange="changeShowInfo" />
-        </view>
-      </view>
-    </view>
-    <view wx:if="{{showInfo}}">
-      <view class="cells-title">右侧百分比字体大小</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">font-size</view>
-          <slider class="cell-body" min="10" max="30" value="{{fontSize}}" show-value bindchanging="changeFontSize" bindchange="changeFontSize" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">圆角大小</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">border-radius</view>
-          <slider class="cell-body" step="0.01" min="0" max="{{strokeWidth / 2}}" value="{{borderRadius}}" show-value bindchanging="changeBorderRadius" bindchange="changeBorderRadius" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">进度条线的宽度</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">stroke-width</view>
-          <slider class="cell-body" min="6" max="100" value="{{strokeWidth}}" show-value bindchanging="changeStrokeWidth" bindchange="changeStrokeWidth" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">已选择的进度条的颜色</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">activeColor</view>
-          <input class="cell-body" value="{{activeColor}}" bindconfirm="changeActiveColor" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">未选择的进度条的颜色</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">backgroundColor</view>
-          <input class="cell-body" value="{{backgroundColor}}" bindconfirm="changeBackgroundColor" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">进度条从左往右的动画</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">active</view>
-          <view class="cell-body"></view>
-          <switch class="cell-footer" checked="{{active}}" bindchange="changeActive" />
-        </view>
-      </view>
-    </view>
-    <view wx:if="{{active}}">
-      <view class="cells-title">播放动画的开始位置</view>
-      <view class="cells">
-        <view class="cell cell__access">
-          <view class="cell-label">active-mode</view>
-          <picker class="cell-body" mode="selector" range="{{activeModeList}}" value="{{activeMode}}" bindchange="changeActiveMode">{{activeModeList[activeMode]}}</picker>
-          <view class="cell-footer"></view>
-        </view>
-      </view>
-    </view>
-    <view wx:if="{{active}}">
-      <view class="cells-title">进度增加1%所需毫秒数</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">duration</view>
-          <slider class="cell-body" min="0" max="60" value="{{duration}}" show-value bindchanging="changeDuration" bindchange="changeDuration" />
-        </view>
-      </view>
-    </view>
-  </view>
+  <mp-form class="content">
+    <mp-cells title="百分比 0~100">
+      <mp-cell title="percent">
+        <slider min="0" max="100" value="{{percent}}" show-value bind:change="changePercent" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="在进度条右侧显示百分比">
+      <mp-cell title="show-info">
+        <switch checked="{{showInfo}}" bind:change="changeShowInfo" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells wx:if="{{showInfo}}" title="右侧百分比字体大小">
+      <mp-cell title="font-size">
+        <slider min="10" max="30" value="{{fontSize}}" show-value bind:changing="changeFontSize" bind:change="changeFontSize" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="圆角大小">
+      <mp-cell title="border-radius">
+        <slider step="0.01" min="0" max="{{strokeWidth / 2}}" value="{{borderRadius}}" show-value bind:changing="changeBorderRadius" bind:change="changeBorderRadius" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="进度条线的宽度">
+      <mp-cell title="stroke-width">
+        <slider min="6" max="100" value="{{strokeWidth}}" show-value bind:changing="changeStrokeWidth" bind:change="changeStrokeWidth" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="已选择的进度条的颜色">
+      <mp-cell title="activeColor">
+        <input value="{{activeColor}}" bind:confirm="changeActiveColor" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="未选择的进度条的颜色">
+      <mp-cell title="backgroundColor">
+        <input value="{{backgroundColor}}" bind:confirm="changeBackgroundColor" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="进度条从左往右的动画">
+      <mp-cell title="active">
+        <switch checked="{{active}}" bind:change="changeActive" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells wx:if="{{active}}" title="播放动画的开始位置">
+      <mp-cell title="active-mode">
+        <picker mode="selector" range="{{activeModeList}}" value="{{activeMode}}" bind:change="changeActiveMode">{{activeModeList[activeMode]}}</picker>
+      </mp-cell>
+    </mp-cells>
+    <mp-cells wx:if="{{active}}" title="进度增加1%所需毫秒数">
+      <mp-cell title="duration">
+        <slider min="0" max="60" value="{{duration}}" show-value bind:changing="changeDuration" bind:change="changeDuration" />
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
 </view>

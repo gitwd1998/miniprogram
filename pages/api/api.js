@@ -1,15 +1,13 @@
 // pages/api/api.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     selected: -1,
-    list: [{
+    list: [
+      {
         title: '开放接口',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '微信登录',
             url: '/'
           },
@@ -58,7 +56,8 @@ Page({
       {
         title: '界面',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '设置界面标题',
             url: '/'
           },
@@ -115,7 +114,8 @@ Page({
       {
         title: '设备',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '获取手机网络状态',
             url: '/'
           },
@@ -184,15 +184,18 @@ Page({
       {
         title: '性能',
         icon: 'info',
-        items: [{
-          name: '获取性能数据',
-          url: '/'
-        }, ]
+        items: [
+          {
+            name: '获取性能数据',
+            url: '/'
+          }
+        ]
       },
       {
         title: '网络',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '发起一个请求',
             url: '/'
           },
@@ -221,7 +224,8 @@ Page({
       {
         title: '媒体',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '图片',
             url: '/'
           },
@@ -258,7 +262,8 @@ Page({
       {
         title: '位置',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '获取当前位置',
             url: '/'
           },
@@ -275,7 +280,8 @@ Page({
       {
         title: '数据',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '本地存储',
             url: '/'
           },
@@ -292,7 +298,8 @@ Page({
       {
         title: '多线程',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '多线程',
             url: '/'
           },
@@ -302,7 +309,8 @@ Page({
       {
         title: '框架',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '双向绑定',
             url: '/'
           },
@@ -318,73 +326,15 @@ Page({
       },
     ]
   },
-
   handleSelected(e) {
     let { index } = e.currentTarget.dataset
     this.setData({
       selected: this.data.selected === index ? -1 : index,
     })
   },
-
   toPage(e) {
     wx.navigateTo({
       url: e.currentTarget.dataset.url,
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

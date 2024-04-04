@@ -22,6 +22,11 @@ Page({
     // genderMap: ['-', '男', '女']
   },
 
+  onLoad() {
+    console.log(1, getApp());
+    console.log(2, getCurrentPages());
+    console.log(3, this);
+  },
   /**
    * 手动获取用户信息
    * 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
@@ -82,6 +87,9 @@ Page({
     this.setData({
       'userInfo.avatarUrl': e.detail.avatarUrl
     })
+  },
+  bindGetphonenumber(e) {
+    console.log(e);
   },
   bindChange(e) {
     this.setData({

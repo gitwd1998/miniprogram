@@ -6,18 +6,22 @@ Page({
    */
   data: {
     selected: -1,
-    list: [{
+    list: [
+      {
         title: '用户鉴权',
         icon: 'info',
-        items: [{
-          name: '获取OpenID',
-          url: '/'
-        }, ]
+        items: [
+          {
+            name: '获取OpenID',
+            url: '/'
+          }
+        ]
       },
       {
         title: '数据库',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '基本操作',
             url: '/'
           },
@@ -34,7 +38,8 @@ Page({
       {
         title: '存储',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: '上传文件',
             url: '/'
           },
@@ -59,7 +64,8 @@ Page({
       {
         title: '云函数',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'WXContext',
             url: '/'
           },

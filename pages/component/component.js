@@ -1,15 +1,13 @@
 // pages/component/component.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     selected: -1,
-    list: [{
+    list: [
+      {
         title: '视图容器',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'view',
             url: '../component-page/view/view/view'
           },
@@ -34,7 +32,8 @@ Page({
       {
         title: '基础内容',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'text',
             url: '../component-page/base/text/text'
           },
@@ -55,7 +54,8 @@ Page({
       {
         title: '表单组件',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'button',
             url: '../component-page/form/button/button'
           },
@@ -108,15 +108,19 @@ Page({
       {
         title: '导航',
         icon: 'info',
-        items: [{
-          name: 'navigator',
-          url: '../component-page/nav/navigator/navigator'
-        }, ]
+        items: [
+          {
+            name: 'navigator',
+            url: '../component-page/nav/navigator/navigator',
+            icon: ''
+          }
+        ]
       },
       {
         title: '媒体组件',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'image',
             url: '../component-page/media/image/image'
           },
@@ -141,7 +145,8 @@ Page({
       {
         title: '地图',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'map',
             url: '../component-page/map/map/map'
           },
@@ -154,7 +159,8 @@ Page({
       {
         title: '画布',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'canvas-2d',
             url: '../component-page/canvas/canvas-2d/canvas-2d'
           },
@@ -167,7 +173,8 @@ Page({
       {
         title: '开放能力',
         icon: 'info',
-        items: [{
+        items: [
+          {
             name: 'ad',
             url: '../component-page/open/ad/ad'
           },
@@ -184,80 +191,40 @@ Page({
       {
         title: '无障碍访问',
         icon: 'info',
-        items: [{
-          name: 'aria-component',
-          url: '../component-page/aria/aria-component/aria-component'
-        }, ]
+        items: [
+          {
+            name: 'aria-component',
+            url: '../component-page/aria/aria-component/aria-component'
+          }
+        ]
       },
     ],
   },
-
+  onLoad() {
+    wx.createSelectorQuery().select('page').boundingClientRect((q,w,e) => {
+      console.log(12, q,w,e);
+    })
+    wx.createSelectorQuery().select('.hhhhh').fields({
+      scrollOffset: true,
+      size: true,
+    }, (res) => {
+      this.animate('.hhhhh', [{
+        ease: 'ease', scale: [0, 0], opacity: 0
+      },
+      {
+        ease: 'ease', scale: [1, 1], opacity: 1
+      }])
+    }).exec()
+  },
   handleSelected(e) {
     let { index } = e.currentTarget.dataset
     this.setData({
       selected: this.data.selected === index ? -1 : index,
     })
   },
-
   toPage(e) {
     wx.navigateTo({
       url: e.currentTarget.dataset.url,
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(this);
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -1,10 +1,10 @@
 page {
   height: 100%;
-  background: var(--BG-0);
+  background: var(--weui-BG-0);
 }
 page > view {
   min-height: 120%;
-  color: var(--FG-0);
+  color: var(--weui-FG-0);
 }
 .header {
   padding: 60rpx
@@ -12,19 +12,15 @@ page > view {
 .header-title {}
 .header-desc {
   margin-top: 5px;
-  color: var(--FG-1);
+  color: var(--weui-FG-1);
 }
 .content {
   padding: 0 0 60rpx;
 }
-.content__spacing {
-  padding-left: 40rpx;
-  padding-right: 40rpx;
-}
 .content-item {
   margin-bottom: 8px;
   border-radius: 5px;
-  background: var(--BG-2);
+  background: var(--weui-BG-2);
   overflow: hidden;
 }
 .content-item-wrap, .content-item-title {

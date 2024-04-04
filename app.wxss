@@ -1,21 +1,18 @@
 /* app.wxss */
 /* 调色板 */
-@import 'style/palette.wxss';
+/* @import 'style/palette.wxss'; */
 
 /* 基础样式 */
 @import 'style/base.wxss';
 
 /* 单元格 */
-@import 'style/cell.wxss';
-
-/* 图标 */
-@import 'style/icon.wxss';
+/* @import 'style/cell.wxss'; */
 
 /* 提示条 */
-@import 'style/toptips.wxss';
+/* @import 'style/toptips.wxss'; */
 
 /* 弹性布局 */
-@import 'style/flex.wxss';
+/* @import 'style/flex.wxss'; */
 
 /* 动画 */
-@import 'style/animation.wxss';
+/* @import 'style/animation.wxss'; */

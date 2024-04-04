@@ -1,12 +1,13 @@
 //app.js
 App({
 
+  accountInfo: wx.getAccountInfoSync().miniProgram,
   globalData: {
-    accountInfo: wx.getAccountInfoSync().miniProgram
+    
   },
   onLaunch: function () {
     wx.setEnableDebug({
-      enableDebug: accountInfo.envVersion === 'trial'
+      enableDebug: this.accountInfo.envVersion === 'trial'
     })
     // 获取系统信息
     wx.getSystemInfo({

@@ -5,34 +5,21 @@
     <view class="header-desc">图标组件</view>
     <icon type="{{typeList[type]}}" size="{{size}}" color="{{color}}" />
   </view>
-  <view class="content">
-    <view>
-      <view class="cells-title">icon的大小 单位默认为px</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">size</view>
-          <slider class="cell-body" min="16" max="100" value="{{size}}" show-value bindchanging="changeSize" bindchange="changeSize" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">icon的颜色 同css的color</view>
-      <view class="cells">
-        <view class="cell">
-          <view class="cell-label">color</view>
-          <input class="cell-body" value="{{color}}" bindconfirm="changeColor" />
-        </view>
-      </view>
-    </view>
-    <view>
-      <view class="cells-title">icon的类型</view>
-      <view class="cells">
-        <view class="cell cell__access">
-          <view class="cell-label">type</view>
-          <picker class="cell-body" mode="selector" range="{{typeList}}" value="{{type}}" bindchange="changeType">{{typeList[type]}}</picker>
-          <view class="cell-footer"></view>
-        </view>
-      </view>
-    </view>
-  </view>
+  <mp-form class="content">
+    <mp-cells title="icon的大小 单位默认为px">
+      <mp-cell title="size">
+        <slider min="16" max="100" value="{{size}}" show-value bind:changing="changeSize" bind:change="changeSize" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="icon的颜色 同css的color">
+      <mp-cell title="color">
+        <input value="{{color}}" bind:confirm="changeColor" />
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="icon的类型">
+      <mp-cell title="type">
+        <picker mode="selector" range="{{typeList}}" value="{{type}}" bind:change="changeType">{{typeList[type]}}</picker>
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
 </view>
