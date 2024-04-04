@@ -14,9 +14,8 @@
       title="{{item.title}}"
       bind:tap="handleSelected"
     >
-      <block wx:if="{{index === selected}}">
+      <view class="cell-wrap" style="transition: 0.3s; height: {{index === selected ? 56 * item.items.length + 'px' : '0'}}">
         <mp-cell
-          ext-class="hhhhh"
           wx:for="{{item.items}}"
           wx:key="name"
           wx:for-item="nav"
@@ -26,7 +25,7 @@
           catch:tap="toPage"
         >
         </mp-cell>
-      </block>
+      </view>
     </mp-cells>
   </view>
 </view>

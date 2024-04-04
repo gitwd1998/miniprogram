@@ -201,20 +201,6 @@ Page({
     ],
   },
   onLoad() {
-    wx.createSelectorQuery().select('page').boundingClientRect((q,w,e) => {
-      console.log(12, q,w,e);
-    })
-    wx.createSelectorQuery().select('.hhhhh').fields({
-      scrollOffset: true,
-      size: true,
-    }, (res) => {
-      this.animate('.hhhhh', [{
-        ease: 'ease', scale: [0, 0], opacity: 0
-      },
-      {
-        ease: 'ease', scale: [1, 1], opacity: 1
-      }])
-    }).exec()
   },
   handleSelected(e) {
     let { index } = e.currentTarget.dataset
