@@ -1,5 +1,5 @@
 <!--pages/mine/mine.wxml-->
-<view>
+<view data-weui-theme="{{ theme }}">
   <mp-form wx:if="{{canIUseButttonChooseAvatar && canIUseInputNickname && (!userInfo.nickName || !userInfo.avatarUrl)}}">
     <view class="header">
       <button open-type="chooseAvatar" bind:chooseavatar="bindChooseavatar">

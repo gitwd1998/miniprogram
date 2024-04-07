@@ -1,5 +1,5 @@
 <!--pages/expand/expand.wxml-->
-<view>
+<view data-weui-theme="{{ theme }}">
   <view class="header">
     <view class="header-title">小程序扩展能力展示</view>
     <view class="header-desc">

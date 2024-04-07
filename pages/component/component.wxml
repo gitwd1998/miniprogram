@@ -1,5 +1,5 @@
 <!--pages/component/component.wxml-->
-<view>
+<view data-weui-theme="{{ theme }}">
   <view class="header">
     <view class="header-title">小程序官方组件展示</view>
     <view class="header-desc">

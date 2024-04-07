@@ -1,5 +1,5 @@
 <!--pages/api/api.wxml-->
-<view>
+<view data-weui-theme="{{ theme }}">
   <view class="header">
     <view class="header-title">接口小程序接口能力展示</view>
     <view class="header-desc">

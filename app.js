@@ -2,21 +2,17 @@
 App({
 
   accountInfo: wx.getAccountInfoSync().miniProgram,
-  globalData: {
-    
-  },
+  systemInfo: {},
+  globalData: {},
   onLaunch: function () {
+    // vConsole
     wx.setEnableDebug({
       enableDebug: this.accountInfo.envVersion === 'trial'
     })
     // 获取系统信息
-    wx.getSystemInfo({
-      success: res => {
-        console.info('systemInfo', res)
-      },
-      fail: err => {
-        console.error(err)
-      }
+    wx.getSystemInfo().then(res => {
+      console.info(res)
+      this.systemInfo = res
     })
 
     const logs = wx.getStorageSync('logs') || []

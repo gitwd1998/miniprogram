@@ -1,6 +1,8 @@
 // pages/expand/expand.js
+const app = getApp()
 Page({
   data: {
+    theme: app.systemInfo.theme,
     selected: -1,
     list: [
       {

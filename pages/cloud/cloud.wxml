@@ -1,5 +1,5 @@
 <!--pages/cloud/cloud.wxml-->
-<view>
+<view data-weui-theme="{{ theme }}">
   <view class="header">
     <view class="header-title">小程序云开发展示</view>
     <view class="header-desc">
